@@ -11,8 +11,7 @@ function clickSpider(){
 
 function spiderHover(){
 
-  if(document.getElementById("spideraccuse").getAttribute("src")
-  === "spidermanaccuse.jpeg"){
+  if(document.getElementById("spideraccuse").getAttribute("src") === "spidermanaccuse.jpeg"){
     alert("Spiderman cannot trust anyone, not even himself");
   } else {
     alert("Spiderman says you're ok!");
