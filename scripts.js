@@ -1,5 +1,5 @@
-function robots(){
+function robits(){
 
   window.open("/robots.txt");
-  
+
 }
