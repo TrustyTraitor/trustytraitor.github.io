@@ -1,0 +1,81 @@
+/*Fonts import*/
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto');
+
+html
+{
+  height:100%;
+}
+
+/* Formats for the body*/
+body
+{
+  height:100%;
+  padding:0;
+  margin:0;
+}
+
+/*Format for the main content area*/
+main
+{
+  width:80%;
+  margin-left:10%;
+
+  font-family:'Roboto', sans-serif;
+  font-size:18pt;
+}
+
+/*Styles for header and content*/
+header, header a
+{
+  width:100%;
+  background-color: #3366cc;
+  overflow:hidden;
+  padding-bottom:0.1em;
+  position:sticky;
+  top:0;
+
+  font-family:'Oswald', sans-serif;
+  font-size:21pt;
+  color:white;
+}
+
+/* Removes all formatting from the nav */
+nav ul li, #navigation a
+{
+  list-style-type:none;
+  display:inline;
+  text-decoration:none;
+}
+
+/*Created a small space inbetween navigation list elements*/
+li a
+{
+  margin-left:0.5em;
+}
+
+/* Pushes the navigation away from the wall of the browser window */
+nav
+{
+  margin-right:2em;
+}
+
+/* Pushes the logo away from the wall of the browser window */
+#logo
+{
+  margin-left:2em;
+}
+
+/*Handles floating the nav elements left*/
+#navFloatLeft
+{
+  float:left;
+  width:50%;
+}
+
+/*Handles floating the nav elements right*/
+#navFloatRight
+{
+  float:right;
+  width:50%;
+  text-align:right;
+}
