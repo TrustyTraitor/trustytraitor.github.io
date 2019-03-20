@@ -12,6 +12,7 @@ body
   height:100%;
   padding:0;
   margin:0;
+  position:relative;
 }
 
 /*Format for the main content area*/
@@ -19,9 +20,11 @@ main
 {
   width:80%;
   margin-left:10%;
+  position:relative;
 
   font-family:'Roboto', sans-serif;
   font-size:18pt;
+  clear:both;
 }
 
 /*Styles for header and content*/
@@ -40,7 +43,7 @@ header, header a
 }
 
 /* Removes all formatting from the nav */
-nav ul li, #navigation a, #logo a
+header nav ul li, #navigation a, #logo a
 {
   list-style-type:none;
   display:inline;
@@ -62,51 +65,38 @@ nav ul li, #navigation a, #logo a
   animation-duration:3s;
   animation-iteration-count:infinite;
   border-bottom:3px solid #3366cc;
+  border-bottom:3px solid #3399ff;
 }
 
 /*Created a small space inbetween navigation list elements*/
-li a
+header li a
 {
   margin-left:0.5em;
 }
 
 /* Pushes the navigation away from the wall of the browser window */
-nav
+header nav
 {
-  margin-right:2em;
+  margin-right:1em;
 }
 
 /* Pushes the logo away from the wall of the browser window */
 #logo
 {
-  margin-left:2em;
+  margin-left:1em;
 }
 
 /*Handles floating the nav elements left*/
-#navFloatLeft
+.navFloatLeft
 {
   float:left;
   width:50%;
 }
 
 /*Handles floating the nav elements right*/
-#navFloatRight
+.navFloatRight
 {
   float:right;
   width:50%;
   text-align:right;
-}
-
-@keyframes hrAnim
-{
-    from{width:0%;}
-    to{width:100%;}
-}
-
-hr
-{
-  animation-name:hrAnim;
-  animation-duration:3s;
-  height:3px;
-  background-color:black;
 }
