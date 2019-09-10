@@ -34,12 +34,19 @@ header, header a
   background-color: #3366cc;
   overflow:hidden;
   padding-bottom:0.1em;
-  position:sticky;
+  /* position:sticky;*/
   top:0;
 
   font-family:'Oswald', sans-serif;
   font-size:21pt;
   color:white;
+}
+
+/*Style for footer*/
+
+footer p, footer a, footer p span a
+{
+  margin-left:3em;
 }
 
 /* Removes all formatting from the nav */
