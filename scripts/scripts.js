@@ -1,3 +1,3 @@
 function robits(){
-  window.open("robots.txt");
+  window.open("robits.txt");
 }
