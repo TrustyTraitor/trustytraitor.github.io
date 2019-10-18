@@ -1,0 +1,220 @@
+body, html
+{
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-size: 18pt;
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+header
+{
+  overflow:hidden;
+  background-color:black;
+  width:100%;
+  box-shadow:5px 5px 5px grey;
+}
+
+main
+{
+  width:80%;
+  margin-left:10%;
+}
+
+#shortFooter
+{
+  clear:both;
+  position:absolute;
+  bottom:0;
+  overflow:hidden;
+  background-color:black;
+  width:100%;
+  font-family:'Raleway', sans-serif;
+  margin-top:2%;
+}
+
+footer
+{
+  clear:both;
+  position:relative;
+  bottom:0;
+  overflow:hidden;
+  background-color:black;
+  width:100%;
+  font-family:'Raleway', sans-serif;
+  margin-top:5%;
+}
+
+#homePageHeader
+{
+  width:100%;
+  background-color:blue;
+}
+
+footer a, footer p
+{
+    color:grey;
+    font-size:10pt;
+    text-decoration:none;
+    display:inline;
+}
+
+#footerLeft
+{
+  float:left;
+  margin-left:1em;
+}
+
+#footerRight
+{
+  float:right;
+  text-align:right;
+  margin-right:1em;
+}
+
+#footerMiddleR
+{
+  float:right;
+  margin-right:1em;
+}
+
+.clickPara
+{
+  cursor:pointer;
+}
+
+#mainNav ul li
+{
+  display:inline;
+}
+
+ul li span a
+{
+  /* background-color:black; */
+  border-style:solid;
+  border-color:black;
+  border-width: 0.2em 0.2em 0.2em 0.2em;
+  border-radius:0.1em;
+  padding: 0.1em 0.1em 0.1em 0.1em;
+}
+
+li span a:hover
+{
+  color:black;
+  background-color:white;
+  border-style:solid;
+  border-color:white;
+  border-width: 0.2em 0.2em 0.2em 0.2em;
+  border-radius:0.1em;
+  padding: 0.1em 0.1em 0.1em 0.1em;
+}
+
+ul li span a, #headerLogo a
+{
+  text-decoration:none;
+  color:white;
+}
+
+span a
+{
+  margin-right: 2em;
+}
+
+main p, .normalFont
+{
+  font-family:'Raleway', sans-serif;
+  font-size:16pt;
+}
+
+#headerLogo
+{
+  margin-left:1em;
+  font-size:24pt;
+  vertical-align:middle;
+  height:45px;
+  line-height:normal;
+  display:inline-block;
+}
+
+.floatRight
+{
+  float:right;
+  width:50%;
+}
+
+.floatLeft
+{
+  float:left;
+  width:50%;
+}
+
+#mainNav
+{
+  text-align:right;
+  clear:both;
+  height:45px;
+  line-height:45px;
+}
+
+#mainContent
+{
+  margin-left:10%;
+  width:70%;
+}
+
+.linkClass
+{
+  text-decoration:none;
+  color:blue;
+}
+
+.experiencesContainer
+{
+  width: 60%;
+  float:left;
+}
+
+.paraText
+{
+  font-size:16pt;
+}
+
+.contactContainer
+{
+  width:30%;
+  float:left;
+  margin-left:10%;
+}
+
+.imgContainer
+{
+  float:left;
+  width:30%;
+  height:20%;
+  padding-right:0.5em;
+}
+
+.imgContainer2
+{
+  float:right;
+  width:30%;
+  height:20%;
+  padding-left:0.5em;
+}
+
+dt, dd, dd a
+{
+  font-family:'Raleway', sans-serif;
+  font-size:16pt;
+  margin-top:0.2em;
+}
+
+a img
+{
+  width:20%;
+}
+
+#certList
+{
+  font-size: 16pt;
+}
