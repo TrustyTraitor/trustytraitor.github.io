@@ -1,2 +1,5 @@
 terminalversion/
 todo.txt
+node_modules
+.vscode
+tsconfig.json
