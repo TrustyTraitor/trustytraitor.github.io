@@ -1,2 +1,4 @@
-terminalversion/
-todo.txt
+node_modules
+.git
+.vscode
+tsconfig.json
