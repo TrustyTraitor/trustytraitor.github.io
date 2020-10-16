@@ -1,0 +1,21 @@
+$body-bg: rgb(226, 226, 226);
+
+$card-height: 90%;
+
+$theme-colors: (
+    "primary": rgb(127, 72, 230)
+);
+
+.jumbotron {
+    background-color: #ffffff !important;
+}
+
+.navbar-brand {
+    margin-left:0.7em;
+}
+
+.navbar-nav {
+    margin-right:0.7em;
+}
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
