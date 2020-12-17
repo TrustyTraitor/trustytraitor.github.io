@@ -4,7 +4,7 @@ function getRepos() {
         .then((data) => data.forEach(displayRepos))
         .catch((err) => console.log(err));
 }
-function displayRepos(item) {
+const displayRepos = (item) => {
     let appendClassList = (object, classes) => classes.forEach((item) => object.classList.add(item));
     let appendChildren = (object, classes) => classes.forEach((item) => object.appendChild(item));
     let container = document.getElementById("projectsContainer");
@@ -46,5 +46,5 @@ function displayRepos(item) {
     container_fragment.appendChild(colDiv).appendChild(card).appendChild(card_body);
     appendChildren(card_body, [card_title, card_text, card_subtitle, card_text, list_group]);
     container.appendChild(container_fragment);
-}
+};
 //# sourceMappingURL=getRepos.js.map

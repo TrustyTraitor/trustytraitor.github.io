@@ -3,11 +3,11 @@ function getRepos()
     fetch('https://api.github.com/users/Dovahkid/repos')
     .then( (response) => response.json() )
     .then( (data) => data.forEach(displayRepos) )
-    .catch( (err) =>console.log(err) )
+    .catch( (err) =>console.log(err) );
 
 }
 
-function displayRepos(item: { homepage: string; name: string; language: string; description: string; svn_url: string; })
+const displayRepos = (item: { homepage: string; name: string; language: string; description: string; svn_url: string; }) =>
 {
 
     let appendClassList = (object: HTMLElement, classes: string[]) =>
@@ -15,7 +15,6 @@ function displayRepos(item: { homepage: string; name: string; language: string; 
 
     let appendChildren = (object: HTMLElement, classes: HTMLElement[]) => 
         classes.forEach( (item) => object.appendChild(item) )
-
 
     let container: HTMLElement = document.getElementById("projectsContainer");
 
@@ -48,7 +47,6 @@ function displayRepos(item: { homepage: string; name: string; language: string; 
     let repo_item_link: HTMLElement = document.createElement('li');
     appendClassList(repo_item_link, ["list-group-item"]);
     list_group.appendChild(repo_item_link);
-
 
     let repo_link: HTMLElement = document.createElement('a');
     appendClassList(repo_link, ["card-link"]);
