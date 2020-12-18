@@ -12,35 +12,34 @@ class Projects extends Component<{}, IProject> {
   constructor(props:any) {
     super(props);
     this.state = { panels: []};
-    
-    this.getRepos();
-
   }
 
-  getRepos = () =>
+  componentDidMount() {
+    this.getRepos().then( (data) => { 
+      this.setState({ panels: data }) 
+    } );
+  }
+
+  getRepos = async () =>
   {
-    console.log("api call");
-    fetch('https://api.github.com/users/Dovahkid/repos')
-        .then( (response) => response.json())
-        .then( (data) => {
-            this.setState({panels: data});
-          }
-          );
+    const response = await fetch('https://api.github.com/users/Dovahkid/repos');
+    return await response.json();
   }
 
   render() {
-    console.log("rendering component!")
-
     return (
+      this.state.panels.length ? 
       <div className="container">
         <div className="Projects row">
        {
-         this.state.panels.map( (i, id) => { console.log("rendering card")
+         this.state.panels.map( (i, id) => {
           return <ProjectPanel key={id} name={i.name} description={i.description} language={i.language} svn_url={i.svn_url} homepage={i.homepage}/>
          })
        }
       </div>
     </div>
+    :
+    <span>Loading...</span>
     );
   }
   

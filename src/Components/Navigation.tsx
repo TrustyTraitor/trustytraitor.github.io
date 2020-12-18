@@ -1,6 +1,5 @@
 import {Component} from 'react';
 import {Nav, Navbar, NavDropdown} from 'react-bootstrap';
-import './Navigation.scss';
 import {Link} from 'react-router-dom';
 
 class Navigation extends Component

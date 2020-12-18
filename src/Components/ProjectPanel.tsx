@@ -13,18 +13,12 @@ interface IPanel
 class ProjectPanel extends Component<IPanel>
 {
 
-    constructor(props: any) {
-        super(props);
-
-        this.state = {};
-    }
-
     render()
     {
         return (
             <div className="col-sm-12 col-md-6 col-lg-4">
                 <Card className="mb-4 mr-1">
-                    <Card.Body>
+                    <Card.Body className="d-flex flex-column">
                         <Card.Title> {this.props.name} </Card.Title>
                         <Card.Subtitle> {this.props.language} </Card.Subtitle>
                         <Card.Text> {this.props.description} </Card.Text>
