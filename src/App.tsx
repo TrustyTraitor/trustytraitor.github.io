@@ -5,14 +5,14 @@ import Navigation from './Components/Navigation';
 import Home from './Home';
 import Projects from './Projects';
 
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {HashRouter as Router, Route, Switch} from 'react-router-dom';
 
 class App extends Component {
 
   render() {
     return (
       <div className="App">
-        <Router basename={process.env.PUBLIC_URL}>
+        <Router>
 
           <Navigation/>
           
