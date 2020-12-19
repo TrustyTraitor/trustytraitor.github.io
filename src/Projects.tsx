@@ -2,51 +2,53 @@ import {Component} from 'react';
 import ProjectPanel from './Components/ProjectPanel';
 
 interface IProject {
-  panels: repoType[];
+panels: repoType[];
 }
 
 type repoType = {name: string, description: string, language: string, html_url: string, homepage: string};
 
 class Projects extends Component<{}, IProject> 
 {
+    constructor(props:any) 
+    {
+        super(props);
+        this.state = { panels: []};
+    }
 
-  constructor(props:any) 
-  {
-    super(props);
-    this.state = { panels: []};
-  }
+    componentDidMount() 
+    {
+        this.getRepos()
+        .then( (data) => 
+        { 
+            this.setState({ panels: data }) 
+        } 
+        );
+    }
 
-  componentDidMount() 
-  {
-    this.getRepos().then( (data) => { 
-      this.setState({ panels: data }) 
-    } );
-  }
+    getRepos = async () =>
+    {
+        const response = await fetch('https://api.github.com/users/Dovahkid/repos');
+        return await response.json();
+    }
 
-  getRepos = async () =>
-  {
-    const response = await fetch('https://api.github.com/users/Dovahkid/repos');
-    return await response.json();
-  }
+    render() 
+    {
+        return (
+            this.state.panels.length ? 
+            <div className="container">
+                <div className="Projects row">
+                {
+                    this.state.panels.map( (i, id) => {
+                        return <ProjectPanel key={id} name={i.name} description={i.description} language={i.language} html_url={i.html_url} homepage={i.homepage}/>
+                    })
+                }
+                </div>
+            </div>
+            :
+            <span>Loading...</span>
+        );
+    }
 
-  render() 
-  {
-    return (
-      this.state.panels.length ? 
-      <div className="container">
-        <div className="Projects row">
-       {
-         this.state.panels.map( (i, id) => {
-          return <ProjectPanel key={id} name={i.name} description={i.description} language={i.language} html_url={i.html_url} homepage={i.homepage}/>
-         })
-       }
-        </div>
-      </div>
-      :
-      <span>Loading...</span>
-    );
-  }
-  
 }
 
 export default Projects;
