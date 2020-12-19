@@ -7,9 +7,10 @@ import Projects from './Projects';
 
 import {HashRouter as Router, Route, Switch} from 'react-router-dom';
 
-class App extends Component {
-
-  render() {
+class App extends Component 
+{
+  render() 
+  {
     return (
       <div className="App">
         <Router>
@@ -23,12 +24,9 @@ class App extends Component {
           </Switch>
 
         </Router>
-        
-        
       </div>
     );
   }
-  
 }
 
 export default App;

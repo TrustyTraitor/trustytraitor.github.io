@@ -3,16 +3,15 @@ import { Card, ListGroup } from 'react-bootstrap';
 
 interface IPanel
 {
-    name: string;
-    language: string;
-    description: string;
-    svn_url: string;
+    name?: string;
+    language?: string;
+    description?: string;
+    html_url?: string;
     homepage?: string;
 }
 
 class ProjectPanel extends Component<IPanel>
 {
-
     render()
     {
         return (
@@ -24,7 +23,7 @@ class ProjectPanel extends Component<IPanel>
                         <Card.Text> {this.props.description} </Card.Text>
                         <ListGroup className="mt-auto list-group-flush">
                             <ListGroup.Item>
-                                <Card.Link target="_blank" href={this.props.svn_url}>Repo here</Card.Link>
+                                <Card.Link target="_blank" href={this.props.html_url}>Repo here</Card.Link>
                                 { this.props.homepage ? <Card.Link target="_blank" href={this.props.homepage} className="mt-auto">Site here</Card.Link> : ''}
                             </ListGroup.Item>
                         </ListGroup>
