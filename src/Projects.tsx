@@ -1,5 +1,6 @@
 import {Component} from 'react';
-import ProjectPanel from './Components/ProjectPanel';
+import PanelCollection from './Components/PanelCollection';
+import getRepos from './scripts/getRepos';
 
 interface IProject {
     repos: repoType[];
@@ -17,7 +18,7 @@ class Projects extends Component<{}, IProject>
 
     componentDidMount() 
     {
-        this.getRepos()
+        getRepos()
         .then( (data) => 
         { 
             this.setState({ repos: data }) 
@@ -25,28 +26,19 @@ class Projects extends Component<{}, IProject>
         );
     }
 
-    // Politely Asks github for my repos
-    getRepos = async () =>
-    {
-        const response = await fetch('https://api.github.com/users/Dovahkid/repos');
-        return await response.json();
-    }
-
     render() 
     {
-        
         return (
             this.state.repos.length ? 
             <div className="container">
                 <div className="Projects">
-                    <ProjectPanel repos={this.state.repos}/>
+                    <PanelCollection repos={this.state.repos}/>
                 </div>
             </div>
             :
             <span>Loading...</span>
         );
     }
-
 }
 
 export default Projects;
