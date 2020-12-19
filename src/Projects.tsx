@@ -2,7 +2,7 @@ import {Component} from 'react';
 import ProjectPanel from './Components/ProjectPanel';
 
 interface IProject {
-panels: repoType[];
+    repos: repoType[];
 }
 
 type repoType = {name: string, description: string, language: string, html_url: string, homepage: string};
@@ -12,7 +12,7 @@ class Projects extends Component<{}, IProject>
     constructor(props:any) 
     {
         super(props);
-        this.state = { panels: []};
+        this.state = { repos: []};
     }
 
     componentDidMount() 
@@ -20,11 +20,12 @@ class Projects extends Component<{}, IProject>
         this.getRepos()
         .then( (data) => 
         { 
-            this.setState({ panels: data }) 
+            this.setState({ repos: data }) 
         } 
         );
     }
 
+    // Politely Asks github for my repos
     getRepos = async () =>
     {
         const response = await fetch('https://api.github.com/users/Dovahkid/repos');
@@ -33,15 +34,12 @@ class Projects extends Component<{}, IProject>
 
     render() 
     {
+        
         return (
-            this.state.panels.length ? 
+            this.state.repos.length ? 
             <div className="container">
-                <div className="Projects row">
-                {
-                    this.state.panels.map( (i, id) => {
-                        return <ProjectPanel key={id} name={i.name} description={i.description} language={i.language} html_url={i.html_url} homepage={i.homepage}/>
-                    })
-                }
+                <div className="Projects">
+                    <ProjectPanel repos={this.state.repos}/>
                 </div>
             </div>
             :
