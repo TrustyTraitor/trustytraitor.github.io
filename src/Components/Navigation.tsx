@@ -12,8 +12,8 @@ function Navigation()
                     <Link to="/" className="nav-link">Home</Link>
                     <Link to="/projects" className="nav-link">Projects</Link>
                     <NavDropdown title="Contact" id="collapsible-nav-dropdown">
-                        <NavDropdown.Item target="_blank" href="https://www.linkedin.com/in/michael-gain-36212b184/"> LinkedIn </NavDropdown.Item>
-                        <NavDropdown.Item target="_blank" href="mailto:gainmikey@gmail.com"> E-mail </NavDropdown.Item>
+                        <NavDropdown.Item rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/michael-gain-36212b184/"> LinkedIn </NavDropdown.Item>
+                        <NavDropdown.Item rel="noreferrer" target="_blank" href="mailto:gainmikey@gmail.com"> E-mail </NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
             </Navbar.Collapse>
