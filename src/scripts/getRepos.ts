@@ -1,7 +1,7 @@
-// Politely Asks github for my repos
-const getRepos = async () =>
+/**Politely Asks github for list of repos */ 
+const getRepos = async (url:string) =>
 {
-    const response = await fetch('https://api.github.com/users/Dovahkid/repos');
+    const response = await fetch(url);
     return await response.json();
 }
 

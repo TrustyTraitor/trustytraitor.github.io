@@ -1,5 +1,6 @@
 import { Card, ListGroup } from 'react-bootstrap';
 
+
 interface IPanel
 {
     repo: Repo;
@@ -13,9 +14,8 @@ type Repo = {
     homepage?: string,
 }
 
-function ProjectPanel(props: IPanel) // Takes in a repo object
+function ProjectPanel(props: IPanel)
 {
-    // returns a panel with information
     return ( 
         <div className="col-sm-12 col-md-6 col-lg-4">
             <Card className="mb-4 mr-1">

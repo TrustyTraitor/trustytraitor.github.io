@@ -1,44 +1,24 @@
-import {Component} from 'react';
+import React, {useEffect} from 'react';
 import PanelCollection from './Components/PanelCollection';
 import getRepos from './scripts/getRepos';
 
-interface IProject {
-    repos: repoType[];
-}
-
-type repoType = {name: string, description: string, language: string, html_url: string, homepage: string};
-
-class Projects extends Component<{}, IProject> 
+const Projects = () =>
 {
-    constructor(props:any) 
-    {
-        super(props);
-        this.state = { repos: []};
-    }
+    const [repos, setRepos] = React.useState([]);
+    const url:string = 'https://api.github.com/users/Dovahkid/repos';
 
-    componentDidMount() 
-    {
-        getRepos()
-        .then( (data) => 
-        { 
-            this.setState({ repos: data }) 
-        } 
-        );
-    }
+    useEffect(() => {
+        getRepos(url).then( (data) => {setRepos(data)});
+    }, []); 
 
-    render() 
-    {
-        return (
-            this.state.repos.length ? 
-            <div className="container">
-                <div className="Projects">
-                    <PanelCollection repos={this.state.repos}/>
-                </div>
-            </div>
-            :
-            <span>Loading...</span>
-        );
-    }
+    return (
+        repos.length ? 
+        <div className="container">
+            <PanelCollection repos={repos}/>
+        </div>
+        :
+        <span>Loading...</span>
+    );
 }
 
 export default Projects;

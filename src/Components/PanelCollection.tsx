@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectPanel from './ProjectPanel';
 
-interface IRepos
+interface IRepos 
 {
     repos: Repo[];
 }
@@ -14,8 +14,7 @@ type Repo = {
     homepage?: string,
 }
 
-// Panel Collection returns an array of panels created from the repos gathered
-function PanelCollection(props: IRepos)
+const PanelCollection = (props: IRepos) =>
 {
     const panels = props.repos.map( (i, idx) => {
         return <ProjectPanel key={idx} repo={i} />
