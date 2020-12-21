@@ -12,17 +12,18 @@ function Home()
 
                     <hr className="my-4"/>
 
-                    <p>My name is Michael Gain. I currently attend Cabarrus Early College of Technology and Rowan-Cabarrus Community College. 
-                    I will receive my High School Diploma as well as an Applied Associates of Computer Programming.</p>
+                    <p>My name is Michael Gain. I have just finished high school at Cabarrus Early College of Technology and at Rowan-Cabarrus Community College. 
+                        There I earned my Associates degree in Information Technology, Computer Programming and Development. I will now be attending High Point University starting in January 2021.</p>
 
                     <p>I love programming and everything computers. I have done a lot of programming in languages such as C++, C#, Python, 
                     JavaScript/TypeScript, and Visual Basic. I also do a little HTML and CSS. C# has quickly become my favorite language 
                     to use because of its flexibility and versatility. Programming is perfect for me because I love to come up with an idea 
                     and actually make it a reality.</p>
 
-                    <p>If I'm not programming I'm probably playing video games. My favorite game is Skyrim and it is my biggest inspiration for 
-                    wanting to develop video games as a career. My interest in programming goes back a few years before with Minecraft. Seeing 
-                    all the amazing mods that people could create inspired me to learn how to program.</p>
+                    <p>If I'm not programming I'm probably playing video games. My favorite type of games are massive 
+                        openworld RPGs such as Skyrim, Witcher 3 and Cyberpunk 2077. These are my biggest inspiration for 
+                        wanting to develop video games. My interest in programming goes back a few years before with Minecraft, 
+                        seeing all the amazing mods that people could create inspired me to learn how to program.</p>
                 </div>
 
                 <div className="jumbotron">
@@ -35,11 +36,11 @@ function Home()
 
                     <hr className="my-4"/>
                     
-                    <p>I am currently enrolled in Cabarrus Early College of Technology and Rowan-Cabarrus Community College. I am working towards an Applied Associates of Computer Programming.</p>
+                    <p>I have finished High School and received my Associates in Information Technology, Computer Programming and Development.</p>
                     <p>Most of my recent projects are listed on my <Link to="/projects">Projects page</Link>. Other notable projects have been hosting a website using WAMP server, hosting game 
                     servers with various software, and processes associated with both such as port forwarding.</p>
 
-                    <p>I also have 3 certificates:</p>
+                    <p>I have also earned 3 certificates:</p>
                     <ul className="list-group list-group-flush">
                         <li className="list-group-item">MTA for Software Development Fundamentals (C#)</li>
                         <li className="list-group-item">MTA for Introduction to Programming Using Javascript</li>
