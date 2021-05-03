@@ -36,7 +36,7 @@ function Home()
 
                     <hr className="my-4"/>
                     
-                    <p>I have finished High School and received my Associates in Information Technology, Computer Programming and Development.</p>
+                    <p>I have finished High School and received my Associates in Information Technology, Computer Programming and Development. I am now attending High Point University.</p>
                     <p>Most of my recent projects are listed on my <Link to="/projects">Projects page</Link>. Other notable projects have been hosting a website using WAMP server, hosting game 
                     servers with various software, and processes associated with both such as port forwarding.</p>
 
