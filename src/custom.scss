@@ -1,6 +1,4 @@
-$theme-colors: (
-    "primary": #7f48e6
-);
+$primary: #7f48e6;
 
 $body-bg: rgb(233, 232, 232);
 
@@ -25,6 +23,10 @@ $card-height: 90%;
 .education-img {
     width: 5em;
     height: 5em;
+}
+
+.card-link {
+    color: $primary;
 }
 
 @import "~bootstrap/scss/bootstrap";

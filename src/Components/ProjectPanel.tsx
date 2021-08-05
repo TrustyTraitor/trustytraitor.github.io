@@ -10,7 +10,7 @@ function ProjectPanel(props: IPanel)
 {
     return ( 
         <div className="col-sm-12 col-md-6 col-lg-4">
-            <Card className="mb-4 mr-1">
+            <Card className="mb-4 mr-1" >
                 <Card.Body className="d-flex flex-column">
                     <Card.Title> {props.repo.name} </Card.Title>
                     <Card.Subtitle> {props.repo.language} </Card.Subtitle>

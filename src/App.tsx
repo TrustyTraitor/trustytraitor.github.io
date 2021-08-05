@@ -2,8 +2,8 @@ import {Component} from 'react';
 import './App.scss';
 import './Components/Navigation';
 import Navigation from './Components/Navigation';
-import Home from './Home';
-import Projects from './Projects';
+import Home from './Pages/Home';
+import Projects from './Pages/Projects';
 
 import {HashRouter as Router, Route, Switch} from 'react-router-dom';
 
