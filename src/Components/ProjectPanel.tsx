@@ -1,17 +1,9 @@
 import { Card, ListGroup } from 'react-bootstrap';
-
+import Repo from '../Types/Repo';
 
 interface IPanel
 {
     repo: Repo;
-}
-
-type Repo = {
-    name?: string,
-    language?: string,
-    description?: string,
-    html_url?: string,
-    homepage?: string,
 }
 
 function ProjectPanel(props: IPanel)

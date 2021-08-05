@@ -1,17 +1,10 @@
 import React from "react";
 import ProjectPanel from './ProjectPanel';
+import Repo from '../Types/Repo';
 
 interface IRepos 
 {
     repos: Repo[];
-}
-
-type Repo = {
-    name?: string,
-    language?: string,
-    description?: string,
-    html_url?: string,
-    homepage?: string,
 }
 
 const PanelCollection = (props: IRepos) =>

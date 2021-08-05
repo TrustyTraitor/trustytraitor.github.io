@@ -1,12 +1,14 @@
 import educationImg from './assets/education.svg';
 import {Link} from 'react-router-dom';
+import { ListGroup, ListGroupItem } from 'react-bootstrap';
+import CustomJumbotron from './Components/CustomJumbotron'
 
 function Home()
 {
     return (
         <div className="Home">
             <div className="container">
-                <div className="jumbotron">
+                {/* <div className="jumbotron">
                     <h1 className="display-4 d-none d-md-block d-lg-block">About Me</h1>
                     <h3 className="d-sm-block d-md-none">About Me</h3>
 
@@ -24,7 +26,21 @@ function Home()
                         openworld RPGs such as Skyrim, Witcher 3 and Cyberpunk 2077. These are my biggest inspiration for 
                         wanting to develop video games. My interest in programming goes back a few years before with Minecraft, 
                         seeing all the amazing mods that people could create inspired me to learn how to program.</p>
-                </div>
+                </div> */}
+                <CustomJumbotron header="About Me">
+                    <p>My name is Michael Gain. I have just finished high school at Cabarrus Early College of Technology and at Rowan-Cabarrus Community College. 
+                        There I earned my Associates degree in Information Technology, Computer Programming and Development. I will now be attending High Point University starting in January 2021.</p>
+
+                    <p>I love programming and everything computers. I have done a lot of programming in languages such as C++, C#, Python, 
+                    JavaScript/TypeScript, and Visual Basic. I also do a little HTML and CSS. C# has quickly become my favorite language 
+                    to use because of its flexibility and versatility. Programming is perfect for me because I love to come up with an idea 
+                    and actually make it a reality.</p>
+
+                    <p>If I'm not programming I'm probably playing video games. My favorite type of games are massive 
+                        openworld RPGs such as Skyrim, Witcher 3 and Cyberpunk 2077. These are my biggest inspiration for 
+                        wanting to develop video games. My interest in programming goes back a few years before with Minecraft, 
+                        seeing all the amazing mods that people could create inspired me to learn how to program.</p>
+                </CustomJumbotron>
 
                 <div className="jumbotron">
                     <a className="float-left d-none d-sm-none d-md-block" href="https://www.flaticon.com/authors/linector" title="Linector" rel="noreferrer" target="_blank">
@@ -41,11 +57,11 @@ function Home()
                     servers with various software, and processes associated with both such as port forwarding.</p>
 
                     <p>I have also earned 3 certificates:</p>
-                    <ul className="list-group list-group-flush">
-                        <li className="list-group-item">MTA for Software Development Fundamentals (C#)</li>
-                        <li className="list-group-item">MTA for Introduction to Programming Using Javascript</li>
-                        <li className="list-group-item">MTA for Introduction to Programming using Python</li>
-                    </ul>
+                    <ListGroup variant="flush">
+                        <ListGroupItem>MTA for Software Development Fundamentals (C#)</ListGroupItem>
+                        <ListGroupItem>MTA for Introduction to Programming Using Javascript</ListGroupItem>
+                        <ListGroupItem>MTA for Introduction to Programming using Python</ListGroupItem>
+                    </ListGroup>
                 </div>
             </div>
         </div>
