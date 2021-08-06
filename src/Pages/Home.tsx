@@ -13,7 +13,7 @@ function Home()
                         There I earned my Associates degree in Information Technology, Computer Programming and Development. I will now be attending High Point University starting in January 2021.</p>
 
                     <p>I love programming and everything computers. I have done a lot of programming in languages such as C++, C#, Python, 
-                    JavaScript/TypeScript, and Visual Basic. I also do a little HTML and CSS. C# has quickly become my favorite language 
+                    Java, JavaScript/TypeScript, and Visual Basic. I also do a little HTML and CSS. C# has quickly become my favorite language 
                     to use because of its flexibility and versatility. Programming is perfect for me because I love to come up with an idea 
                     and actually make it a reality.</p>
 
@@ -24,8 +24,10 @@ function Home()
                 </CustomJumbotron>
 
                 <CustomJumbotron header="Education and Experience" image={educationImg} imageStyle="education-img">
-                    <p>I have finished High School and received my Associates in Information Technology, Computer Programming and Development. I am now attending High Point University.</p>
-                    <p>Most of my recent projects are listed on my <Link to="/projects">Projects page</Link>. Other notable projects have been hosting a website using WAMP server, hosting game 
+                    <p>I have finished High School and received my Associates in Information Technology, Computer Programming and Development. 
+                        I am now attending High Point University to earn my Bachelors in Programming.</p>
+                    <p>Most of my recent projects are listed on my <Link to="/projects">Projects page</Link>. 
+                    Other notable projects have been hosting a website using WAMP server, hosting game 
                     servers with various software, and processes associated with both such as port forwarding.</p>
 
                     <p>I have also earned 3 certificates:</p>

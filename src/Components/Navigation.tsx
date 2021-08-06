@@ -1,10 +1,11 @@
-import {Nav, Navbar, NavDropdown, Container} from 'react-bootstrap';
+import {Nav, Navbar, NavDropdown, Container, NavLink} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
+import GithubIcon from '../assets/github.png'
 
 function Navigation()
 {
     return (
-        <Navbar collapseOnSelect expand="lg" variant="dark" bg="primary">
+        <Navbar collapseOnSelect expand="lg" variant="dark" bg="primary" sticky="top">
             <Container fluid>
                 <Navbar.Toggle/>
                 <Link to="/" className="navbar-brand">Michael Gain</Link>
@@ -16,8 +17,9 @@ function Navigation()
                             <NavDropdown.Item rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/michael-gain-36212b184/"> LinkedIn </NavDropdown.Item>
                             <NavDropdown.Item rel="noreferrer" target="_blank" href="mailto:gainmikey@gmail.com"> E-mail </NavDropdown.Item>
                         </NavDropdown>
+                        <NavLink href="https://github.com/Dovahkid" target="_blank"><img alt="github" src={GithubIcon} className="navbarImages"/></NavLink>
                     </Nav>
-                </Navbar.Collapse>    
+                </Navbar.Collapse>
             </Container>
             
         </Navbar>
