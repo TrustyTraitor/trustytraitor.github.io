@@ -7,7 +7,7 @@ import CustomJumbotron from '../Components/CustomJumbotron'
 const Projects = () =>
 {
     const [repos, setRepos] = React.useState([]);
-    const url:string = 'https://api.github.com/users/Dovahkid/repos';
+    const url:string = 'https://api.github.com/users/TrustyTraitor/repos';
 
     useEffect(() => {
         getRepos(url).then( (data) => {setRepos(data)});
