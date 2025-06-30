@@ -16,7 +16,7 @@ function Project( {name, description, languages, repo, homepage}: IProject ) {
                 <div className="projectLanguages">
 
                     { languages.map(language => (
-                        <img src="" alt="{language} icon"/>
+                        <img src="" alt={language}/>
                     )) }
 
                 </div>
