@@ -1,0 +1,43 @@
+@import url('https://cdn.jsdelivr.net/npm/@catppuccin/palette/css/catppuccin.css');
+
+:root {
+}
+
+.App {
+  background: var(--ctp-mocha-base);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--ctp-mocha-text);
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-link {
+  color: var(--ctp-mocha-blue);
+  text-decoration: none;
+  font-style: italic;
+}
+
+.Emoji-placeholder {
+  font-size: 100pt;
+}
+
+.Box-Glow {
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 0 25px 7px var(--ctp-mocha-crust);
+  background: radial-gradient( circle 13cqi at center, var(--ctp-mocha-mantle), var(--ctp-mocha-crust) );
+  border-radius: 10%;
+}
+
+.Text-Box {
+  padding: 1em;
+  text-align: center;
+}
