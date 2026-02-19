@@ -34,10 +34,22 @@
   padding: 0;
   box-shadow: 0 0 25px 7px var(--ctp-mocha-crust);
   background: radial-gradient( circle 13cqi at center, var(--ctp-mocha-mantle), var(--ctp-mocha-crust) );
-  border-radius: 10%;
+  border-radius: 1%;
 }
 
 .Text-Box {
+  margin: 1em;
   padding: 1em;
-  text-align: center;
+  /*text-align: center;*/
+  font-size: 0.75em;
+  border-radius: 1%;
+
+  @media (min-width: 1000px) {
+    width: 50em;
+  }
+}
+
+a {
+  color: var(--ctp-mocha-blue);
+  text-decoration: none;
 }

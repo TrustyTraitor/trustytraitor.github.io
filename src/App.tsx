@@ -1,22 +1,26 @@
 import './App.css';
 
+import { marked } from "marked";
+import GetReadme from "./GetReadme.ts";
+import {useEffect} from "react";
+
 export default function App() {
+    let url: string = "https://raw.githubusercontent.com/TrustyTraitor/TrustyTraitor/main/README.md"
+
+    useEffect(() => {
+        GetReadme(url).then((data) =>
+            document.getElementById("readme").innerHTML = marked.parse(data));
+    });
+
     return (
         <div className="App">
                 <div className="Text-Box Box-Glow">
-                    <h1 className="Emoji-placeholder">🚧</h1>
-                    <p>
-                        This site is currently under construction.
-                    </p>
-                    <p>
-                        In the meantime, you can check out my <a
-                            className="App-link"
-                            href="https://github.com/trustytraitor"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            GitHub
-                        </a>
-                    </p>
+                    <div id="readme"> </div>
+                </div>
+                <div className="Text-Box Box-Glow">
+                    This site is a WIP. In the meantime,
+                    check out my <a href="https://github.com/TrustyTraitor/" rel="noreferrer" target="_blank">Github </a>
+                    to see more of my projects not included here.
                 </div>
         </div>
     );
